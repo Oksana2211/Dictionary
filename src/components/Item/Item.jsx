@@ -8,9 +8,15 @@ export default function Item(props) {
 
     function transcriptionClose() {
         props.setId(props.item.id)
-
-
     }
+
+    // constructor(props)
+    // {
+    //     super(props);
+    //     this.state = {
+    //         pressed: false
+    //     };
+    // };
 
     return (
 
