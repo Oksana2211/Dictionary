@@ -1,0 +1,11 @@
+@import "../../style/variables.scss";
+
+.list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    border: 1px solid $color1;
+    width: 90vw;
+    margin-top: 1vw;
+    text-align: center;
+
+}

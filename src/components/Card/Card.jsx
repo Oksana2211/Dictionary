@@ -1,5 +1,6 @@
 import React from "react"
 import Item from "../Item/Item"
+
 import { useState } from "react";
 import style from "./style.module.scss"
 
@@ -17,3 +18,5 @@ export default function Card(props) {
         </div>
     );
 }
+
+

@@ -26,6 +26,16 @@ export default function Item(props) {
             <div><h3 className={`style.transcription ${style[classItemActive]}`}>{props.item.russian}</h3></div>
             <div><button onClick={transcriptionClose}>Проверить</button></div>
         </section>
-
     )
 }
+
+// export default function WordList(props) {
+
+
+//     return (
+
+//         <section className={style.list}>
+//             <div>{props.item.english}</div>
+//         </section>
+//     )
+// }
