@@ -22,3 +22,16 @@
 .transcriptionActiv {
     color: rgb(0, 0, 0);
 }
+
+.buttonActiv {
+    display: none;
+}
+
+.button {
+    color: $color1;
+    width: 8vw;
+    height: 3vw;
+    border-radius: 10vw;
+    border: 1px solid $color1;
+
+}

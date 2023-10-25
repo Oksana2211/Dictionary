@@ -5,6 +5,7 @@ import style from './style.module.scss'
 export default function Item(props) {
 
     const classItemActive = props.activeCards ? 'transcriptionActiv' : "transcription"
+    const classButtonActive = props.activeCards ? 'buttonActiv' : "button"
 
     function transcriptionClose() {
         props.setId(props.item.id)
@@ -24,7 +25,7 @@ export default function Item(props) {
             <div><h2>{props.item.english}</h2></div>
             <div><h3>{props.item.transcription}</h3></div>
             <div><h3 className={`style.transcription ${style[classItemActive]}`}>{props.item.russian}</h3></div>
-            <div><button onClick={transcriptionClose}>Проверить</button></div>
+            <div><button className={style[classButtonActive]} onClick={transcriptionClose}>Проверить</button></div>
         </section>
     )
 }
