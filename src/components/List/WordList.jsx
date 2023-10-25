@@ -1,6 +1,8 @@
 import React from "react"
 // import { useState } from "react";
 import style from './style.module.scss'
+import iconPencil from '../../img/pencil.png'
+import iconBasket from '../../img/trash_сan.png'
 
 
 
@@ -13,7 +15,8 @@ export default function WordList(props) {
             <div>{props.item.english}</div>
             <div>{props.item.transcription}</div>
             <div>{props.item.russian}</div>
-            <div>{"иконки"}</div>
+            <div><img className={style.icon} src={iconPencil} alt="icon pensil" />
+                <img className={style.icon} src={iconBasket} alt="icon delete" /></div>
         </section>
     )
 }
