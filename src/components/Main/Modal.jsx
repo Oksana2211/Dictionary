@@ -10,10 +10,12 @@ export default function Modal(active, setActive, ...props) {
     console.log(classActive)
 
     return (
-        <section>
+        <section >
             <div className={`${style[classActive]}`} onClick={() => setActive(false)}>
+
                 <div className={style.modalContent} onClick={e => e.stopPropagation()}>
                 </div>
+
             </div>
 
         </section >
