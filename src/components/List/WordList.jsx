@@ -15,8 +15,8 @@ export default function WordList(props) {
             <div>{props.item.english}</div>
             <div>{props.item.transcription}</div>
             <div>{props.item.russian}</div>
-            <div><img className={style.icon} src={iconPencil} alt="icon pensil" />
-                <img className={style.icon} src={iconBasket} alt="icon delete" /></div>
+            <div><button><img className={style.icon} src={iconPencil} alt="icon pensil" /></button>
+                <button><img className={style.icon} src={iconBasket} alt="icon delete" /></button></div>
         </section>
     )
 }
