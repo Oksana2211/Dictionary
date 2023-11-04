@@ -5,15 +5,15 @@ import style from "./style.module.scss"
 
 export default function Modal(active, setActive, ...props) {
 
-    const classActive = active ? 'modal modalActive' : 'modal'
+    // const classActive = active ? 'modalActive' : 'null'
 
-    console.log(classActive)
+    // console.log(classActive)
 
     return (
         <section >
-            <div className={`${style[classActive]}`} onClick={() => setActive(false)}>
+            <div className={style.modal} onClick={() => setActive(false)}>
 
-                <div className={style.modalContent} onClick={e => e.stopPropagation()}>
+                <div className={style.modalContent} onClick={(e) => e.stopPropagation()}>
                 </div>
 
             </div>
