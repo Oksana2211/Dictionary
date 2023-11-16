@@ -1,0 +1,22 @@
+@import "../../style/variables.scss";
+
+.cont {
+    font-family: $font;
+    font-weight: 400;
+    font-size: 1.2rem;
+    min-height: 80vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    justify-items: center;
+    align-items: center;
+}
+
+.btn {
+    background-color: white;
+    border: none;
+}
+
+.icon {
+    width: 4vw;
+}

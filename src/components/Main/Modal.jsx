@@ -11,7 +11,7 @@ export default function Modal(active, setActive, ...props) {
 
     return (
         <section >
-            <div className={style.modal} onClick={() => setActive(false)}>
+            <div className={style.modal} onClick={() => setActive(false)}><p>Напиши новое слово</p>
 
                 <div className={style.modalContent} onClick={(e) => e.stopPropagation()}>
                 </div>
