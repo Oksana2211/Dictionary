@@ -22,5 +22,3 @@ export default function Modal(active, setActive, ...props) {
 
     )
 }
-
-

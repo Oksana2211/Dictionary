@@ -11,14 +11,6 @@ export default function Item(props) {
         props.setId(props.item.id)
     }
 
-    // constructor(props)
-    // {
-    //     super(props);
-    //     this.state = {
-    //         pressed: false
-    //     };
-    // };
-
     return (
 
         <section className={style.card}>
@@ -29,14 +21,3 @@ export default function Item(props) {
         </section>
     )
 }
-
-// export default function WordList(props) {
-
-
-//     return (
-
-//         <section className={style.list}>
-//             <div>{props.item.english}</div>
-//         </section>
-//     )
-// }

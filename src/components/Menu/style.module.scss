@@ -1,0 +1,15 @@
+@import "../../style/variables.scss";
+
+.nav {
+    display: flex;
+}
+
+.item {
+    text-decoration: none;
+    padding-left: 2vw;
+    color: $color1;
+}
+
+// .item:active {
+//     color: $color-red;
+// }

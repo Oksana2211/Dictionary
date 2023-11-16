@@ -3,6 +3,6 @@ import style from "./style.module.scss"
 
 export default function Footer() {
     return (
-        <section>Footer</section>
+        <section className={style.cont}>Footer</section>
     )
 }

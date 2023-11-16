@@ -1,0 +1,47 @@
+@import "../../style/variables.scss";
+
+.cont {
+    font-family: $font;
+    font-weight: 400;
+    font-size: 1.3rem;
+    min-height: 80vh;
+    margin: 5vw auto 0 auto;
+}
+
+.conteunerButton {
+    margin: auto;
+    padding: auto;
+    width: 10vw;
+    margin-top: 2vw;
+}
+
+.buttonSave {
+    text-align: center;
+}
+
+.icon {
+    width: 2vw;
+}
+
+.modal {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(0, 0, 0, 0.4);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: scale(0);
+}
+
+.modalActive {
+    transform: scale(1);
+}
+
+.modalContent {
+    padding: 20px;
+    border-radius: 12px;
+    background-color: white;
+}

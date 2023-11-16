@@ -1,0 +1,9 @@
+@import "../../style/variables.scss";
+
+.cont {
+    font-family: $font;
+    font-weight: 500;
+    font-size: 1.5rem;
+    min-height: 80vh;
+    margin: 5vw auto 0 auto;
+}
