@@ -9,7 +9,7 @@ import distionaryArr from '../../components/data/dictionary.json'
 export default function List() {
 
     return (
-        <div>
+        <div className={style.cont}>
             {distionaryArr.map((item, index) => (
                 < WordList item={item} key={index} />
             ))}

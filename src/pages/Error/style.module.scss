@@ -1,3 +1,7 @@
-.container {
+@import "../../style/variables.scss";
+@import "../../style//template.scss";
+
+.cont {
     min-height: 80vh;
+    min-width: 80vw;
 }

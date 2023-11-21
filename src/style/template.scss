@@ -1,0 +1,21 @@
+@import "./variables.scss";
+
+@mixin text1 {
+    font-family: $font;
+    font-weight: 400;
+    font-size: 1.2rem;
+
+}
+
+@mixin text2 {
+    font-family: $font;
+    font-weight: 500;
+    font-size: 1.5rem;
+
+}
+
+@mixin text3 {
+    font-family: $font;
+    font-weight: 600;
+    font-size: 1.8rem;
+}

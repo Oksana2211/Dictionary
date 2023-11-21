@@ -16,6 +16,7 @@ export default function Card() {
     const object = words[index];
 
     const handlNextItem = () => {
+        console.log(words[index])
         setIndex((prevIndex) =>
             prevIndex === words.length - 1 ? 0 : prevIndex + 1
         );

@@ -1,9 +1,8 @@
 @import "../../style/variables.scss";
+@import "../../style//template.scss";
 
 .cont {
-    font-family: $font;
-    font-weight: 400;
-    font-size: 1.2rem;
+    @include text1;
     min-height: 80vh;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -13,7 +12,7 @@
 }
 
 .btn {
-    background-color: white;
+    background-color: $color3;
     border: none;
 }
 
