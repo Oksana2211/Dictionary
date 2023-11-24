@@ -19,3 +19,20 @@
 .icon {
     width: 3vw;
 }
+
+@media (min-width: 650px) and (max-width: 1023px) {
+
+    /* CSS-стили Tablet*/
+
+    .icon {
+        width: 5vw;
+    }
+}
+
+@media screen and (max-width: 649px) {
+
+    /* CSS-стили Smartphone*/
+    .icon {
+        width: 8vw;
+    }
+}

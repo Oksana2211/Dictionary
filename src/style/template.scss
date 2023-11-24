@@ -19,3 +19,9 @@
     font-weight: 600;
     font-size: 1.8rem;
 }
+
+@mixin text4 {
+    font-family: $font;
+    font-weight: 400;
+    font-size: 1rem;
+}

@@ -37,3 +37,33 @@
     border: 1px solid $color1;
 
 }
+
+@media (min-width: 650px) and (max-width: 1023px) {
+
+    /* CSS-стили Tablet*/
+    .card {
+
+        height: 31vw;
+        width: 25vw;
+    }
+
+    .button {
+        width: 12vw;
+        height: 5vw;
+    }
+}
+
+@media screen and (max-width: 649px) {
+
+    /* CSS-стили Smartphone*/
+    .card {
+
+        height: 40vw;
+        width: 33vw;
+    }
+
+    .button {
+        width: 18vw;
+        height: 6vw;
+    }
+}
