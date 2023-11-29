@@ -8,6 +8,8 @@ import style from "./style.module.scss"
 
 export default function Card() {
 
+
+
     const [id, setId] = useState(0)
 
 
@@ -16,7 +18,6 @@ export default function Card() {
     const object = words[index];
 
     const handlNextItem = () => {
-        console.log(words[index])
         setIndex((prevIndex) =>
             prevIndex === words.length - 1 ? 0 : prevIndex + 1
         );
@@ -28,23 +29,33 @@ export default function Card() {
         );
     };
 
-    // console.log(words)
+    const [count, setCount] = useState(0);
+
+    const handlNextCount = () => {
+        setCount(count + 1);
+    };
 
 
     return (
+        <section className={style.conteuner}>
+            <div className={style.cont}>
+                <button onClick={handlPrevItem} className={style.btn}><img className={style.icon} src={buttLeft} alt="Left" /></button>
 
-        <section className={style.cont}>
-            <button onClick={handlPrevItem} className={style.btn}><img className={style.icon} src={buttLeft} alt="Left" /></button>
+                < Item english={object.english}
+                    transcription={object.transcription}
+                    russian={object.russian}
+                    index={object.id}
+                    key={object.id}
+                    activeCards={object.id === id}
+                    setId={setId}
+                    handlNextCount={handlNextCount} />
 
-            < Item english={object.english}
-                transcription={object.transcription}
-                russian={object.russian}
-                index={object.id}
-                key={object.id}
-                activeCards={object.id === id} setId={setId} />
-
-            <button onClick={handlNextItem} className={style.btn}><img className={style.icon} src={buttRight} alt="Right" /></button>
+                <button onClick={handlNextItem} className={style.btn}><img className={style.icon} src={buttRight} alt="Right" /></button>
+            </div>
+            <p className={style.count}>Ты молодец, так держать!</p>
+            <p className={style.count}>Изучено слов:{count} </p>
         </section>
+
 
     );
 }

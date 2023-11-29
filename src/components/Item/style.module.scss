@@ -35,7 +35,11 @@
     height: 3vw;
     border-radius: 10vw;
     border: 1px solid $color1;
+}
 
+.button:focus {
+    color: $color1;
+    border: 1.5px solid $color1;
 }
 
 @media (min-width: 650px) and (max-width: 1023px) {
