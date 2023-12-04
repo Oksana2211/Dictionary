@@ -31,15 +31,18 @@
 
 .button {
     color: $color1;
-    width: 8vw;
-    height: 3vw;
+    width: 9vw;
+    height: 3.5vw;
     border-radius: 10vw;
     border: 1px solid $color1;
+    background-color: $color3;
 }
 
 .button:focus {
+    width: 9.5vw;
+    height: 3.5vw;
     color: $color1;
-    border: 1.5px solid $color1;
+    @include text1;
 }
 
 @media (min-width: 650px) and (max-width: 1023px) {
@@ -55,6 +58,12 @@
         width: 12vw;
         height: 5vw;
     }
+
+    .button:focus {
+        width: 13.5vw;
+        height: 5vw;
+        @include text4;
+    }
 }
 
 @media screen and (max-width: 649px) {
@@ -62,12 +71,19 @@
     /* CSS-стили Smartphone*/
     .card {
 
-        height: 40vw;
-        width: 33vw;
+        height: 44vw;
+        width: 36vw;
     }
 
     .button {
         width: 18vw;
         height: 6vw;
+        margin-bottom: 5%;
+    }
+
+    .button:focus {
+        width: 22vw;
+        height: 8vw;
+        @include text4;
     }
 }
