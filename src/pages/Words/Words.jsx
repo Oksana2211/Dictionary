@@ -12,10 +12,10 @@ export default function Words() {
         <section className={style.cont}>
             <List />
 
-            {modalActive && <Modal active={modalActive} setActive={setModalActive} />}
+            {/* {modalActive && <Modal active={modalActive} setActive={setModalActive} />}
 
             <div className={style.conteunerButton}><button className={style.buttonSave} onClick={() => setModalActive(true)}>
-                <img className={style.icon} src={iconSave} alt="icon save" />Новое слово</button></div>
+                <img className={style.icon} src={iconSave} alt="icon save" />Новое слово</button></div> */}
         </section>
     )
 }
