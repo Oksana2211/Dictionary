@@ -3,8 +3,12 @@
 
 .cont {
     @include text2;
-    min-height: 80vh;
+    min-height: 77.4vh;
     margin: 5vw auto 0 auto;
+}
+
+.text {
+    color: $background2;
 }
 
 @media (min-width: 600px) and (max-width: 1023px) {
