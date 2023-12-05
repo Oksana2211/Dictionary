@@ -10,6 +10,13 @@ export default function List() {
 
     return (
         <div className={style.cont}>
+            <div className={`${style.list} ${style.listTitle}`}>
+                <div>English</div>
+                <div>Transcription</div>
+                <div>Russian</div>
+                <div>Редактировать/Удалить</div>
+            </div>
+
             {distionaryArr.map((item, index) => (
                 < WordList item={item} key={index} />
             ))}
