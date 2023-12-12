@@ -1,19 +1,23 @@
-import React, { useState } from 'react'
+import React from 'react'
+import { useContext, useState } from "react";
 import Item from "../Item/Item"
 import distionaryArr from '../data/dictionary.json'
 import buttRight from '../../img/button_right_icon.png'
 import buttLeft from '../../img/button_left_icon.png'
 import style from "./style.module.scss"
+import { Context } from "../../Contex/Context";
 
 
 export default function Card() {
+
+    const { words } = useContext(Context);
 
 
 
     const [id, setId] = useState(0)
 
 
-    const [words, setWord] = useState(distionaryArr);
+    // const [words, setWord] = useState(distionaryArr);
     const [index, setIndex] = useState(0);
     const object = words[index];
 

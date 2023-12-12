@@ -1,12 +1,17 @@
 import React from "react"
 import WordList from "./WordList";
-// import { useState } from "react";
 import style from "./style.module.scss"
-import distionaryArr from '../../components/data/dictionary.json'
+// import distionaryArr from '../../components/data/.json'
+import { useContext, useState } from "react";
+import { Context } from "../../Contex/Context";
+
+
 
 
 
 export default function List() {
+
+    const { words } = useContext(Context);
 
     return (
         <div className={style.cont}>
@@ -17,7 +22,7 @@ export default function List() {
                 <div>Редактировать/Удалить</div>
             </div>
 
-            {distionaryArr.map((item, index) => (
+            {words.map((item, index) => (
                 < WordList item={item} key={index} />
             ))}
         </div>

@@ -1,15 +1,21 @@
 import React from "react"
-import { useState } from "react";
+import { useContext, useState } from "react";
+import PUT from "../../services/PUT";
+import DEL from "../../services/DEL";
 import style from './style.module.scss'
 import iconPencil from '../../img/pencil.png'
 import iconBasket from '../../img/trash_сan.png'
 import iconTick from '../../img/iconTick.png'
 import iconCancel from '../../img/iconCancel.png'
+import { Context } from "../../Contex/Context";
 
 
 
 
 export default function WordList(props) {
+
+    const { words } = useContext(Context);
+    console.log(words)
 
 
     const english = props.item.english;
