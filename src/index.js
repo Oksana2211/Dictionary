@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './style/index.scss';
 import './style/App.scss';
 import App from './components/App/App';
-import { ContextComponent } from "./Contex/Context";
+import { ContextComponent } from "./components/Contex/Context";
 
 
 
@@ -13,5 +13,4 @@ root.render(
     <App />
   </ContextComponent>
 );
-
 

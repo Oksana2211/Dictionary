@@ -5,7 +5,7 @@ import distionaryArr from '../data/dictionary.json'
 import buttRight from '../../img/button_right_icon.png'
 import buttLeft from '../../img/button_left_icon.png'
 import style from "./style.module.scss"
-import { Context } from "../../Contex/Context";
+import { Context } from "../Contex/Context";
 
 
 export default function Card() {
@@ -59,7 +59,6 @@ export default function Card() {
             <p className={style.count}>Ты молодец, так держать!</p>
             <p className={style.count}>Изучено слов:{count} </p>
         </section>
-
 
     );
 }

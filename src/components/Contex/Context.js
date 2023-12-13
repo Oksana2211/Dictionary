@@ -1,12 +1,13 @@
 import { createContext } from "react";
 import { useState, useEffect } from "react";
-import GET from "../services/GET";
+import GET from "../../services/GET";
 
 export const Context = createContext();
 
 export function ContextComponent({ children }) {
   const [words, setWords] = useState([false]);
   const value = { words, setWords };
+
 
   useEffect(() => {
     getApi();
@@ -22,4 +23,5 @@ export function ContextComponent({ children }) {
 
   return <Context.Provider value={value}>{children}</Context.Provider>;
 }
+
 

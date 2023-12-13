@@ -1,21 +1,19 @@
 import React from "react"
 import { useContext, useState } from "react";
-import PUT from "../../services/PUT";
-import DEL from "../../services/DEL";
 import style from './style.module.scss'
 import iconPencil from '../../img/pencil.png'
 import iconBasket from '../../img/trash_сan.png'
 import iconTick from '../../img/iconTick.png'
 import iconCancel from '../../img/iconCancel.png'
-import { Context } from "../../Contex/Context";
+import { Context } from "../Contex/Context";
 
 
 
 
 export default function WordList(props) {
 
-    const { words } = useContext(Context);
-    console.log(words)
+    // const { words } = useContext(Context);
+    // console.log(props)
 
 
     const english = props.item.english;
@@ -84,86 +82,89 @@ export default function WordList(props) {
 
 
     return (
-        <div
-            className={
-                deleted === true ? style.list : style.listNone
-            }
-        >
-            {edit === true ? (
-                <div>{english}</div>
-            ) : (
-                <input
-                    className={
-                        errors.english
-                            ? `${style.inputCont} ${style.inputError}`
-                            : style.inputCont
-                    }
-                    placeholder={english}
-                    value={newEnglish}
-                    onChange={(e) => {
-                        setNewEnglish(e.target.value);
-                        setErrors({ ...errors, english: false, latin: false }); //сбрасываем ошибку при изменении значения
-                    }}
-                ></input>
-            )}
-            {edit === true ? (
-                <div>{newTranscription}</div>
-            ) : (
-                <input
-                    className={
-                        errors.transcription
-                            ? `${style.inputCont} ${style.inputError}`
-                            : style.inputCont
-                    }
-                    placeholder={transcription}
-                    value={newTranscription}
-                    onChange={(e) => {
-                        setNewTranscription(e.target.value);
-                        setErrors({ ...errors, transcription: false }); //сбрасываем ошибку при изменении значения
-                    }}
-                ></input>
-            )}
-            {edit === true ? (
-                <div>{newRussian}</div>
-            ) : (
-                <input
-                    className={
-                        errors.russian
-                            ? `${style.inputCont} ${style.inputError}`
-                            : style.inputCont
-                    }
-                    placeholder={russian}
-                    value={newRussian}
-                    onChange={(e) => {
-                        setNewRussian(e.target.value);
-                        setErrors({ ...errors, russian: false, cyrillic: false }); // сбрасываем ошибку при изменении значения
-                    }}
-                ></input>
-            )}
-            <div className={style.iconCont}>
-                <div>
-                    {edit === true ? (
-                        " "
-                    ) : (
-                        <div onClick={saveChanges}>
-                            <button className={style.btn}><img className={style.icon1} src={iconTick} alt="icon еick" /></button>
-                        </div>
-                    )}
-                    {edit === true ? (
-                        <div onClick={editWord}>
-                            <button className={style.btn}><img className={style.icon} src={iconPencil} alt="icon pensil" /></button>
-                        </div>
-                    ) : (
-                        <div onClick={editWord}>
-                            <button className={style.btn}><img className={style.icon1} src={iconCancel} alt="icon сancel" /></button>
-                        </div>
-                    )}
-                </div>{" "}
-                <div onClick={deleteWord}>
-                    <button className={style.btn}><img className={style.icon} src={iconBasket} alt="icon delete" /></button>
+        <>
+            <div
+                className={
+                    deleted === true ? style.list : style.listNone
+                }
+            >
+                {edit === true ? (
+                    <div>{english}</div>
+                ) : (
+                    <input
+                        className={
+                            errors.english
+                                ? `${style.inputCont} ${style.inputError}`
+                                : style.inputCont
+                        }
+                        placeholder={english}
+                        value={newEnglish}
+                        onChange={(e) => {
+                            setNewEnglish(e.target.value);
+                            setErrors({ ...errors, english: false, latin: false }); //сбрасываем ошибку при изменении значения
+                        }}
+                    ></input>
+                )}
+                {edit === true ? (
+                    <div>{newTranscription}</div>
+                ) : (
+                    <input
+                        className={
+                            errors.transcription
+                                ? `${style.inputCont} ${style.inputError}`
+                                : style.inputCont
+                        }
+                        placeholder={transcription}
+                        value={newTranscription}
+                        onChange={(e) => {
+                            setNewTranscription(e.target.value);
+                            setErrors({ ...errors, transcription: false }); //сбрасываем ошибку при изменении значения
+                        }}
+                    ></input>
+                )}
+                {edit === true ? (
+                    <div>{newRussian}</div>
+                ) : (
+                    <input
+                        className={
+                            errors.russian
+                                ? `${style.inputCont} ${style.inputError}`
+                                : style.inputCont
+                        }
+                        placeholder={russian}
+                        value={newRussian}
+                        onChange={(e) => {
+                            setNewRussian(e.target.value);
+                            setErrors({ ...errors, russian: false, cyrillic: false }); // сбрасываем ошибку при изменении значения
+                        }}
+                    ></input>
+                )}
+                <div className={style.iconCont}>
+                    <div>
+                        {edit === true ? (
+                            " "
+                        ) : (
+                            <div onClick={saveChanges}>
+                                <button className={style.btn}><img className={style.icon1} src={iconTick} alt="icon еick" /></button>
+                            </div>
+                        )}
+                        {edit === true ? (
+                            <div onClick={editWord}>
+                                <button className={style.btn}><img className={style.icon} src={iconPencil} alt="icon pensil" /></button>
+                            </div>
+                        ) : (
+                            <div onClick={editWord}>
+                                <button className={style.btn}><img className={style.icon1} src={iconCancel} alt="icon сancel" /></button>
+                            </div>
+                        )}
+                    </div>{" "}
+                    <div onClick={deleteWord}>
+                        <button className={style.btn}><img className={style.icon} src={iconBasket} alt="icon delete" /></button>
+                    </div>
                 </div>
             </div>
-        </div>
+
+        </>
 
     )
 }

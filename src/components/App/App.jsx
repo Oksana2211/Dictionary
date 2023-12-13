@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { useEffect, useContext, useState } from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Header from "../Header/Header";
 import Main from "../Main/Main";
@@ -9,9 +10,12 @@ import { Home, Game, Words, Error } from '../../pages'
 
 
 
+
 function App() {
 
+
     return (
+
         <div>
             <Router>
                 <Header />
@@ -25,6 +29,7 @@ function App() {
                 <Footer />
             </Router>
         </div>
+
     );
 }
 
