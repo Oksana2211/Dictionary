@@ -1,6 +1,6 @@
 import React from "react"
 import { useContext, useState } from "react";
-import "./NewWord.scss"
+import style from './style.module.scss'
 import { Context } from "../Contex/Context";
 
 
@@ -122,10 +122,10 @@ export default function NewWord() {
 
 
     return (
-        <section className="newWord">
-            <h2 className="wordTitle">Заполните данные карточки:</h2>
+        <section className={style.newWord}>
+            <h2 className={style.wordTitle}>Заполните данные карточки:</h2>
             <form>
-                <div className="wordInput">
+                <div className={style.wordInput}>
                     <label htmlFor="word">Слово: </label>
                     <input
                         type="text"
@@ -133,10 +133,10 @@ export default function NewWord() {
                         id="word"
                         value={form.word}
                         onChange={(e) => handleChange(e)}
-                        className={wordClassName}
+                        className={style[wordClassName]}
                     />
                 </div>
-                <div className="wordInput">
+                <div className={style.wordInput}>
                     <label htmlFor="pronunciation">Транскрипция: </label>
                     <input
                         type="text"
@@ -144,10 +144,10 @@ export default function NewWord() {
                         id="pronunciation"
                         value={form.pronunciation}
                         onChange={(e) => handleChange(e)}
-                        className={pronunciationClassName}
+                        className={style[pronunciationClassName]}
                     />
                 </div>
-                <div className="wordInput">
+                <div className={style.wordInput}>
                     <label htmlFor="translation">Перевод: </label>
                     <input
                         type="text"
@@ -155,10 +155,10 @@ export default function NewWord() {
                         id="translation"
                         value={form.translation}
                         onChange={(e) => handleChange(e)}
-                        className={translationClassName}
+                        className={style[translationClassName]}
                     />
                 </div>
-                <div className="wordInput">
+                <div className={style.wordInput}>
                     <label htmlFor="tags">Теги: </label>
                     <input
                         type="text"
@@ -166,21 +166,20 @@ export default function NewWord() {
                         id="tags"
                         value={form.tags}
                         onChange={(e) => handleChange(e)}
-                        className={tagsClassName}
+                        className={style[tagsClassName]}
                     />
                 </div>
                 {formInvalid && (
                     <div>
-                        <p className="errorMessage">Заполните все поля!</p>
+                        <p className={style.errorMessage}>Заполните все поля!</p>
                     </div>
                 )}
                 {success && (
                     <div>
-                        <p className="errorMessage">Слово добавлено!</p>
+                        <p className={style.errorMessage}>Слово добавлено!</p>
                     </div>
                 )}
-                <button
-                    className="btnSave"
+                <button className={style.btnSave}
                     onClick={handleSubmit}
                     disabled={formInvalid}>
                     Сохранить
